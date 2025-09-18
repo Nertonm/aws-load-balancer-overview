@@ -9,7 +9,7 @@ Este projeto demonstra a criação de uma infraestrutura web escalável, resilie
 #### O que é?
 O Load Balancer atua como o ponto de entrada principal para todo o tráfego de usuários. Ele recebe as requisições e as distribui de forma inteligente entre as instâncias EC2 que estão saudáveis, garantindo que nenhuma delas fique sobrecarregada.
 
-#### Para que serve?:
+#### O que aprendi:
 * **Alta Disponibilidade:** Se uma instância EC2 falhar, o Load Balancer para de enviar tráfego para ela automaticamente, evitando que o usuário final perceba o erro.
 * **Gerenciamento de Tráfego:** Ele distribui a carga de trabalho, melhorando o desempenho e o tempo de resposta do site.
 * **Segurança:** Ao ser posicionado nas subnets públicas e se comunicar com as instâncias nas subnets privadas, ele protege os servidores de aplicação do acesso direto da internet.
@@ -28,7 +28,7 @@ O Load Balancer atua como o ponto de entrada principal para todo o tráfego de u
 #### O que é?
 O Auto Scaling Group é o componente responsável pela escalabilidade da aplicação. Ele garante que tenhamos sempre o número ideal de instâncias EC2 rodando para atender à demanda atual, adicionando servidores quando o tráfego aumenta e removendo-os quando diminui para economizar custos.
 
-#### Para que serve?:
+#### O que aprendi:
 * **Elasticidade e Economia:** O ASG ajusta a quantidade de servidores com base em regras predefinidas, evitando o desperdício de recursos em momentos de baixa demanda e garantindo a performance em picos de acesso.
 * **Resiliência (Self-Healing):** O ASG monitora a saúde das instâncias. Se uma delas for marcada como "não saudável" pelo Load Balancer, o ASG a termina automaticamente e cria uma nova para substituí-la, sem intervenção manual.
 * **Automação:** A criação e remoção de servidores é totalmente automatizada, baseada em um modelo pré-configurado.
@@ -45,7 +45,7 @@ O Auto Scaling Group é o componente responsável pela escalabilidade da aplica�
 #### O que são?
 São as regras que dizem ao Auto Scaling Group **quando** ele deve adicionar (Scale Up) ou remover (Scale Down) instâncias. Elas são acionadas por alarmes que monitoram métricas de desempenho, como o uso de CPU.
 
-#### Para que servem?:
+#### O que aprendi:
 * **Escalabilidade Proativa:** A infraestrutura reage automaticamente às mudanças na carga de trabalho. Em vez de esperar o site ficar lento, o ASG adiciona recursos quando a CPU atinge um certo limite.
 * **Controle de Custos Automatizado:** Da mesma forma, ele remove recursos desnecessários quando a carga diminui, garantindo que você pague apenas pelo que realmente precisa.
 
@@ -84,8 +84,6 @@ São as regras que dizem ao Auto Scaling Group **quando** ele deve adicionar (Sc
     ```
 
     O Terraform irá pedir uma confirmação final.
-
-### Testes:
 
 ## Conclusão
 Com essa configuração, tem-se uma infraestrutura AWS robusta, capaz de lidar com variações de tráfego de forma eficiente e automática. O uso combinado do Application Load Balancer e do Auto Scaling Group garante que a aplicação esteja sempre disponível, performática e econômica.
