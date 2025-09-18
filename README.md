@@ -58,6 +58,35 @@ São as regras que dizem ao Auto Scaling Group **quando** ele deve adicionar (Sc
     * **Alarme de Alta CPU (`high_cpu_alarm`):** Este alarme monitora a métrica `CPUUtilization`. Se a média de CPU for maior ou igual (`GreaterThanOrEqualToThreshold`) a `50%` (`threshold = 50`) por um período contínuo, ele aciona a política de `scale_up`.
     * **Alarme de Baixa CPU (`low_cpu_alarm`):** Este alarme faz o oposto. Se a média de CPU for menor ou igual (`LessThanOrEqualToThreshold`) a `30%` (`threshold = 30`), ele aciona a política de `scale_down` para remover uma instância e economizar custos.i, otimizando os gastos.
 
+### Como fazer o deploy do Projeto?
+1.  Navegue para o diretório do ambiente que deseja subir:
+
+    ```bash
+    cd environments/learning
+    ```
+
+2.  Inicialize o Terraform para instalar os providers necessários.
+
+    ```bash
+    terraform init
+    ```
+
+3.  Gere um plano de execução para verificar os recursos que serão criados:
+
+    ```bash
+    terraform plan -var-file="var.tfvars"
+    ```
+
+4.  Se concordar com o plano apresentado, execute o comando seguinte para criar a infraestrutura:
+
+    ```bash
+    terraform apply -var-file="var.tfvars"
+    ```
+
+    O Terraform irá pedir uma confirmação final.
+
+### Testes:
+
 ## Conclusão
-Com essa configuração, tem-se uma infraestrutura AWS robusta, capaz de lidar com variações de tráfego de forma eficiente e automática. O uso combinado do Application Load Balancer e do Auto Scaling Group garante que sua aplicação esteja sempre disponível, performática e econômica.
+Com essa configuração, tem-se uma infraestrutura AWS robusta, capaz de lidar com variações de tráfego de forma eficiente e automática. O uso combinado do Application Load Balancer e do Auto Scaling Group garante que a aplicação esteja sempre disponível, performática e econômica.
 
