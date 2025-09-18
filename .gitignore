@@ -1,0 +1,11 @@
+environments/learning/.terraform.lock.hcl
+environments/learning/main.tf
+environments/learning/terraform.tfstate
+environments/learning/terraform.tfstate.backup
+environments/learning/testing.tfvars
+environments/learning/.terraform/modules/modules.json
+environments/learning/.terraform/providers/registry.terraform.io/hashicorp/aws/6.13.0/linux_amd64/LICENSE.txt
+environments/learning/.terraform/providers/registry.terraform.io/hashicorp/aws/6.13.0/linux_amd64/terraform-provider-aws_v6.13.0_x5
+environments/learning/.terraform/providers/registry.terraform.io/hashicorp/http/3.5.0/linux_amd64/LICENSE.txt
+.gitignore
+environments/learning/.terraform/providers/registry.terraform.io/hashicorp/http/3.5.0/linux_amd64/terraform-provider-http_v3.5.0_x5
