@@ -1,4 +1,4 @@
-# Visão Geral da Infraestrutura AWS com Load Balancer e Auto Scaling
+# aws-lb-asg-overview
 
 Este projeto demonstra a criação de uma infraestrutura web escalável, resiliente e de alta disponibilidade na AWS usando Terraform. A arquitetura é composta por um Application Load Balancer (ALB) que distribui o tráfego para um grupo de instâncias EC2 gerenciadas por um Auto Scaling Group (ASG), que por sua vez ajusta a quantidade de servidores com base na demanda de CPU.
 
